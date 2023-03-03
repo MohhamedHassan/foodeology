@@ -53,9 +53,9 @@ showLeftSideLinks()
 // end left sidebar links
 // start category lists
 function showCategoryList() {
-    category_list.forEach(item => {
+    category_list.forEach((item,index) => {
         category_list_html += `
-        <li>
+        <li class='${index==2 ? 'active' : ''}'>
             <img src="images/${item.img}" alt="">
             <small class="fw-bold">${item.name}</small>
         </li>
