@@ -23,7 +23,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 12px;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -63,6 +63,7 @@ body {
     background-color: #FFBA2F;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 nav input {
     border-top-right-radius: 0 !important;
