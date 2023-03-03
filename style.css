@@ -64,6 +64,14 @@ body {
     color: white;
     border-radius: 5px;
 }
+nav input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+nav .nav_icon.search {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
 /* end navbar */
 /* start categpries list */
 .categories_list  {
