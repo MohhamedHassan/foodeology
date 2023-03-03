@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- start bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- end bootstrap css -->
+    <!--  start fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  end fontawesome -->
+    <!-- start google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- end google fonts -->
+    <link rel="stylesheet" href="style.css">
+    <title>FoodEology</title>
+</head>
+
+<body>
+    <!-------------------------- start navbar ------------------------>
+    <nav class="navbar navbar-expand-lg bg-white mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand cstm-a" href="#"><span>Food</span>Eology</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  align-items-lg-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link d-flex align-items-center">
+                            <input 
+                            style="background-color: #F6FAFD;"
+                            placeholder="Search...."
+                            type="text" class="form-control">
+                            <i class="fa-solid fa-magnifying-glass nav_icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa-solid fa-qrcode nav_icon"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa-regular fa-bell nav_icon"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold">
+                            <button class="p-2 main_color_button">+ Add New Item</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold">Order #246</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-------------------------- end navbar ------------------------>
+    <!------------------  start left side bar ---------------------->
+    <div class="container-fluid">
+        <section class="row">
+            <aside class="col-lg-12 order-3 order-xl-1 col-xl-3 mb-3">
+                <div class="bg-white h-100 rounded p-3">
+                    <div class="text-center mb-3">
+                        <img style="width:100px" src="/images/casher.png" alt="">
+                        <h2 class="small_h2 fw-bold">Troy A. Edwards</h2>
+                        <small class="d-block">I`am a Cashier 🤑 </small>
+                    </div>
+                    <div 
+                    id="links_container"
+                    class="row links"></div>
+                    <div class="rounded px-3 py-5 text-center prem">
+                        <button class="btn btn-dark">
+                            Go To Premium
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            <!------------------  end left side bar ---------------------->
+
+
+
+
+            <!---------------- start mid section ---------------->
+
+            <section class="col-lg-8 order-1 order-xl-2 col-xl-6 mb-3">
+                <div class="bg-white rounded p-3 mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="m-0 small_h2">
+                            Choose Category
+                            <small>42+ Category</small>
+                        </h2>
+                        <a class="view_all">View All</a>
+                    </div>
+                    <!--  -->
+                    <ul 
+                    id="categories_list_container"
+                    class="m-0 p-0 list-unstyled d-flex flex-nowrap  justify-content-between categories_list">
+                    </ul>
+                    <!--  -->
+                </div>
+                <!--  -->
+                <div 
+                id="products_container"
+                class="row grid"></div>
+            </section>
+            <!---------------- end mid section ---------------->
+
+
+
+
+
+            <!------------------  start right side bar ---------------------->
+            <aside class="col-lg-4 order-2 order-xl-3 col-xl-3 mb-3">
+                <div class="bg-white h-100 rounded pb-3">
+                    <div class="d-flex justify-content-between align-items-center px-2 pt-3">
+                        <h2 class="m-0 small_h2">
+                            New Order Bill
+                        </h2>
+                        <small style="font-size: x-small;" class="text-secondary">Sunday, 28 OCT, 2021</small>
+                    </div>
+                    <!--  -->
+                    <hr>
+                    <!--  -->
+                    <div class="p-2">
+                        <div 
+                        id="cartitems"
+                        class="cart-items-parent mb-3"></div>
+                        <!--  -->
+                        <div class="details">
+                            <p class="mb-1 d-flex justify-content-between align-items-center">
+                                <smal>Sub Total</smal>
+                                <strong id="sub_total"></strong>
+                            </p>
+                            <p class="mb-1 d-flex justify-content-between align-items-center">
+                                <small>Tax 10%</small>
+                                <strong id="tax"></strong>
+                            </p>
+                            <div class="doted"></div>
+                            <p class="mb-1 d-flex justify-content-between align-items-center">
+                                <small  class="total">Total</small>
+                                <strong 
+                                id="totalid"
+                                class="green"></strong>
+                            </p>
+                        </div>
+                        <!--  -->
+                        <div class="payment_method mt-3">
+                            <h2 class="small_h2">
+                                Payment Method
+                            </h2>
+                            <div class="row links">
+                                <div class="col-4 mb-3">
+                                    <a class="rounded p-2">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>Cash</span>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-4 mb-3">
+                                    <a class="rounded p-2">
+                                        <i class="fa-solid fa-credit-card"></i>
+                                        <span>Debit Card</span>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-4 mb-3">
+                                    <a class="rounded p-2">
+                                        <i class="fa-brands fa-google-wallet"></i>
+                                        <span>E-Wallet</span>
+                                    </a>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <button class="py-2 main_color_button w-100">
+                                Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!------------------  end right side bar ---------------------->
+        </section>
+    </div>
+
+
+    <!-- start bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- end bootstrap js -->
+    <script src="index.js"></script>
+</body>
+
+</html>
